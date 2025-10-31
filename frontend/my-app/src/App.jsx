@@ -23,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch(API_URL);
+        const res = await fetch(`${API_URL}/api/jobs`);
         const data = await res.json();
         setJobs(data);
 
