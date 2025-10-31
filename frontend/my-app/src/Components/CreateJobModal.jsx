@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
-import { HiChevronDoubleRight } from 'react-icons/hi';
+import { HiChevronDoubleDown,HiChevronDoubleRight } from 'react-icons/hi';
 import {toast} from 'react-hot-toast'
 
 export default function CreateJobModal({ onClose, onJobCreated }) {
