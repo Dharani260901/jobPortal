@@ -9,7 +9,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["https://job-portal-application-liard.vercel.app/"],
+  origin: ["https://job-portal-mu-silk.vercel.app/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
