@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
-import { HiChevronDoubleDown } from "react-icons/hi";
+import { HiChevronDoubleRight } from 'react-icons/hi';
 import {toast} from 'react-hot-toast'
 
 export default function CreateJobModal({ onClose, onJobCreated }) {
@@ -286,7 +286,7 @@ export default function CreateJobModal({ onClose, onJobCreated }) {
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition"
             >
               {loading ? "Publishing..." : "Publish"}{" "}
-              <HiChevronDoubleDown size={16} />
+              <HiChevronDoubleRight size={16} />
             </button>
           </div>
         </form>
