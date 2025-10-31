@@ -14,7 +14,8 @@ export default function App() {
   const [maxSalary, setMaxSalary] = useState(0);
   const [salaryBounds, setSalaryBounds] = useState({ min: 0, max: 0 });
   const [showCreateJobModal, setShowCreateJobModal] = useState(false);
-  const API_URL = import.meta.env.API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
+
 
 
   <Toaster position="top-right" />
