@@ -9,7 +9,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["https://job-portal-mu-silk.vercel.app/"],
+  origin: ["https://job-portal-mu-silk.vercel.app"],
 }));
 
 app.use(express.json());
