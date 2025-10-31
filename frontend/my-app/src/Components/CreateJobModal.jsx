@@ -18,6 +18,7 @@ export default function CreateJobModal({ onClose, onJobCreated }) {
   });
 
   const [loading, setLoading] = useState(false);
+  const API_URL = import.meta.env.API_URL;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +33,7 @@ export default function CreateJobModal({ onClose, onJobCreated }) {
   console.log("⏳ Sending request to backend...", formData);
 
   try {
-    const res = await fetch("http://localhost:5000/api/jobs", {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...formData, status: "published" }),
@@ -67,7 +68,7 @@ export default function CreateJobModal({ onClose, onJobCreated }) {
     const draftData = { ...formData, status: "draft" };
 
     try {
-      const res = await fetch("http://localhost:5000/api/jobs", {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(draftData),

@@ -14,6 +14,7 @@ export default function App() {
   const [maxSalary, setMaxSalary] = useState(0);
   const [salaryBounds, setSalaryBounds] = useState({ min: 0, max: 0 });
   const [showCreateJobModal, setShowCreateJobModal] = useState(false);
+  const API_URL = import.meta.env.API_URL;
 
 
   <Toaster position="top-right" />
@@ -22,7 +23,7 @@ export default function App() {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/jobs");
+        const res = await fetch(API_URL);
         const data = await res.json();
         setJobs(data);
 
