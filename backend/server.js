@@ -9,9 +9,11 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: ["https://job-portal-mu-silk.vercel.app"],
-   credentials: true
+  origin: ["https://job-portal-mu-silk.vercel.app", "http://localhost:5173"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
 }));
+
 
 app.use(express.json());
 
